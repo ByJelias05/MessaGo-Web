@@ -12,6 +12,7 @@ import { CreateUser } from "../Components/Login/CreateUser";
 export function Login(){
 
     const [Login, setLogin] = useState(true);
+    const [Help, setHelp] = useState(false);
 
     return(
         <div className='Contenedor-Login'>
@@ -42,7 +43,20 @@ export function Login(){
                     <img src={ArcoBotom}/>
                 </div>
                 <div className="Boton-Help">
-                    <button style={{display: 'flex', justifyContent: 'space-evenly', alignItems: 'center'}}>HELP <img style={{width: '30px', marginBottom: '7px', marginLeft: '120px'}} src={Ayuda} alt="" /></button>
+                    {
+                        Help ?
+                        <div className="Box-Help">
+                            <h1 className="Titulo-Box-Help">Did you forget <br/> your password?</h1>
+                            <div className="Btns-Help">
+                                <button>Yes</button>
+                                <button onClick={() =>{setHelp(false)}}>No</button>
+                            </div>
+                        </div>
+                    :
+                    null
+                    }
+
+                    <button onClick={() =>{setHelp(!Help)}} style={{display: 'flex', justifyContent: 'space-evenly', alignItems: 'center'}}>HELP <img style={{width: '30px', marginBottom: '7px', marginLeft: '120px'}} src={Ayuda} alt="" /></button>
                 </div>
             </div>
       </div>

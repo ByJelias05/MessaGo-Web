@@ -2,6 +2,8 @@ import ArcoTop from "../../Images/ArcoTop.svg"
 import icon from "../../icons/sign.ico"
 import lock from "../../icons/Lock.ico"
 import Enter from "../../icons/Enter.png"
+import name from "../../icons/name.ico"
+import Autograph from "../../icons/Autograph.ico"
 
 import { FiAtSign } from "react-icons/fi";
 
@@ -14,29 +16,35 @@ export function CreateUser(){
                  <img src={ArcoTop} alt="" /> 
             </div>
             <div className="Body-Create">
+            {/* <h6 className="Title-Login">Create your messago account!</h6> */}
                 <div style={{display: 'flex', justifyContent: 'space-between'}}>
                     <div className="Input-Icon">
-                        <input type="text" placeholder="Name" />
-                        <img src={icon} style={{width: '40px', height: '40px', marginTop: '10px'}} alt="" />
-                    </div>
-                    <div className="Input-Icon">
-                        <input type="text" placeholder="Last Name" />
-                        <img src={lock} style={{width: '30px', height: '30px', marginTop: '20px'}} alt="" />
+                        <input type="text" placeholder="Complete name" />
+                        <img src={Autograph} style={{width: '30px', height: '30px', marginTop: '15px'}} alt="" />
                     </div>
                 </div>
                 <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                    <div className="Input-Icon">
+                    <div className="Input-Icon User-Email">
                         <input type="text" placeholder="User iD" />
-                        <img src={icon} style={{width: '40px', height: '40px', marginTop: '10px'}} alt="" />
+                        <img src={name} style={{width: '30px', height: '30px', marginTop: '20px'}} alt="" />
                     </div>
-                    <div className="Input-Icon">
+                    <div className="Input-Icon User-Email" >
                         <input type="text" placeholder="New Email" />
+                        <img src={icon} style={{width: '30px', height: '30px', marginTop: '20px'}} alt="" />
+                    </div>
+                </div>
+                <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                    <div className="Input-Icon User-Email">
+                        <input type="text" placeholder="Password" />
                         <img src={lock} style={{width: '30px', height: '30px', marginTop: '20px'}} alt="" />
+                    </div>
+                    <div className="Input-Icon User-Email" >
+                        <input type="text" placeholder="Repeat Password" />
                     </div>
                 </div>
             </div>
             <div className="BtnSesion">
-                <button style={{display: 'flex', justifyContent: 'space-evenly', alignItems: 'center'}}>Login <img src={Enter} style={{width: '30px'}} alt="" /></button>
+                <button style={{display: 'flex', justifyContent: 'space-evenly', alignItems: 'center'}}>Create <img src={Enter} style={{width: '30px'}} alt="" /></button>
             </div>
         </div>
     )
