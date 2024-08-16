@@ -9,6 +9,7 @@ export function RoutesApp(){
             <BrowserRouter>
                 <Routes>
                     <Route path="/" Component={Login}/>
+                    <Route path="/Messago" Component={App}/>
                 </Routes>
             </BrowserRouter>
 
