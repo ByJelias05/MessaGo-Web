@@ -53,7 +53,7 @@ app.post("/CreateUser", async (req, res) =>{
 })
 
 app.post("/Login/:email/:pass", async (req, res) =>{
-  try{
+
     
   const Email = req.params.email
   const PassWord = req.params.pass
@@ -62,25 +62,31 @@ app.post("/Login/:email/:pass", async (req, res) =>{
 
   const Snapshot = await UserRef.get();
 
-
   const Ususario = Snapshot.docs.map((items) =>({id: items.id, ...items.data()}))[0];
 
-  if(PassWord != Ususario.PassWord){
-    res.send("Contraseña incorrecta")
-  }
+  if(typeof Ususario != "undefined"){
 
-  JWT.sign(Ususario, "Login_User", {expiresIn: '30s'}, (error, token) => {
-    if (error) {
-      throw error;
-    } else {
-      res.json({ success: "Perfecto", token });
+    if(PassWord == Ususario.PassWord){
+      res.send({statu: true, ms: "Usuario encontrado"})
+    }else{
+      res.send({statu: false, ms: "Contraseña incorrecta"})
     }
-  });
 
+  }else{
+    res.send({statu: false, ms: "Usuario no encontrado"})
   }
-  catch(error){
-    res.send("Usuario no encontrado")
-  }
+
+  // res.send({statu: true, ms: "Biennn"})
+
+  // JWT.sign(Ususario, "Login_User", {expiresIn: '30s'}, (error, token) => {
+  //   if (error) {
+  //     throw error;
+  //   } else {
+  //     res.json({ success: "Perfecto", token });
+  //   }
+  // });
+ 
+ 
 
 })
 

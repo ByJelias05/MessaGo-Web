@@ -19,8 +19,15 @@ export function Sesion(){
         
         axios.post(`http://localhost:3001/Login/${Email}/${PassWord}`).then(
             (response) =>{
-                alert(response.data)  
-                window.location.href = "http://localhost:5173/Messago"  ;   
+               
+                if(response.data.statu){
+                    sessionStorage.setItem("AuthData", JSON.stringify(response.data.ms))
+                    //alert(response.data)  
+                    window.location.href = "http://localhost:5173/Messago"  ; 
+                }
+                
+                alert(response.data.ms)
+                
             }
         )
     }

@@ -6,21 +6,25 @@ function App() {
   const [user, setUser] = useState(null)
 
   useEffect(() =>{
-    alert("Hola")
+  
+    const data = JSON.parse(sessionStorage.getItem("AuthData"))
+    setUser(data)
+   
+  
   },[])
 
   return (
     <>
       <div className='Contenedor-App'>
         {
-          user != null ?
+          user == "Usuario encontrado" ?
           <h1>Uffff, gracias a Dios</h1>
           :
           <h1>Con Dios lo vamos a lograr</h1>
         }
       </div>
 
-      <button onClick={() => console.log(user)}>verificar</button>
+      <button>verificar</button>
       
     </>
   )
