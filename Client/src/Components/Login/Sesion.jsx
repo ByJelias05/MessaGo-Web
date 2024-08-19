@@ -8,6 +8,8 @@ import { FiAtSign } from "react-icons/fi";
 import axios from "axios"
 import { useState, } from "react";
 
+import Cookie from "universal-cookie"
+
 import "../../Css/Sesion.css"
 
 export function Sesion(){
@@ -21,9 +23,11 @@ export function Sesion(){
             (response) =>{
                
                 if(response.data.statu){
-                    sessionStorage.setItem("AuthData", JSON.stringify(response.data.ms))
-                    //alert(response.data)  
-                    window.location.href = "http://localhost:5173/Messago"  ; 
+                    const cookie = new Cookie();
+                    cookie.set("AuthData", response.data.token, {path: "/", expires: new Date(Date.now() + 1 * 24 * 60 * 60 * 1000)})
+                    //sessionStorage.setItem("AuthData", JSON.stringify(response.data.token))
+                    console.log(response.data.token)  
+                    window.location.href = "http://localhost:5173/"  ; 
                 }
                 
                 alert(response.data.ms)

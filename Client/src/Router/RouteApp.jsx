@@ -8,8 +8,8 @@ export function RoutesApp(){
 
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" Component={Login}/>
-                    <Route path="/Messago" Component={App}/>
+                    <Route path="/" Component={App}/>
+                    <Route path="/Login" Component={Login}/>
                 </Routes>
             </BrowserRouter>
 
