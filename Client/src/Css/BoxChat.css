@@ -1,0 +1,68 @@
+
+.Contenedor-Box-Chat{
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+    width: 100%; 
+    height: 100vh;
+}
+
+.Contenedor-Box-Chat .Header-Chat{
+    border-bottom: solid 1px rgba(0, 0, 0, 0.3);
+}
+.Contenedor-Box-Chat .Body-Chat{
+    border-bottom: solid 1px rgba(0, 0, 0, 0.3);
+}
+.Contenedor-Box-Chat .Footer-Chat{
+    -background: black;
+}
+
+
+.Contenedor-HeaderBox{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.Contenedor-HeaderBox img{
+    width: 60px;
+    height: 60px;
+    background: rgb(220, 157, 188);
+    border-radius: 100vmax;
+}
+.Contenedor-HeaderBox .Nombre-Fecha-User{
+    margin-left: 10px;
+}
+.Contenedor-HeaderBox .Nombre-Fecha-User h4{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    color:rgba(0, 0, 0, 0.3);
+}
+.Contenedor-HeaderBox .Nombre-Fecha-User h6{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    color:rgba(0, 0, 0, 0.3);
+}
+
+
+.Contenedor-Footer-Chat{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.Contenedor-Footer-Chat button{
+    height: 50px;
+    width: 50px;
+    background: transparent;
+    border: none;
+}
+.Contenedor-Footer-Chat input {
+    width: 85%;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    border: 2px solid rgb(145, 206, 249);
+    outline: none;
+    padding-inline: 25px;
+}

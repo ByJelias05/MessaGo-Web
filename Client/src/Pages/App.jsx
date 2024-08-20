@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
 import Cookie from "universal-cookie";
+import { PanelIzquierdo } from '../Components/App/PanelIzquierdo';
+import { BoxChat } from '../Components/App/BoxChat';
 
-
+import "../Css/App.css"
 
 
 function App() {
@@ -32,7 +34,8 @@ function App() {
         {
           typeof user == "object" ?
           <div className='Contenedor-App'>
-            <h1>Logeado</h1>
+            <PanelIzquierdo/>
+            <BoxChat/>
           </div>
           :
           <a href="/Login">Inicar sesion</a>
