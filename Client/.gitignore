@@ -23,9 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 
-*src/Components/App/
-*src/Css/App.css
-*src/Css/BoxChat.css
-*src/Css/PanelIzquierdo.css
-*src/icons/Image.png
-*src/icons/Sent.png

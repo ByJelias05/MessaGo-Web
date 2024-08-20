@@ -24,6 +24,7 @@ const db = fb.firestore();
 const app = express();
 app.use(express.json())
 const Port = 3001;
+const SecreteKey = "AuthData";
 const upload = multer({storage: multer.memoryStorage()});
 app.use(cors())
 
@@ -67,7 +68,15 @@ app.post("/Login/:email/:pass", async (req, res) =>{
   if(typeof Ususario != "undefined"){
 
     if(PassWord == Ususario.PassWord){
-      res.send({statu: true, ms: "Usuario encontrado"})
+
+      JWT.sign(Ususario, SecreteKey, (error, token) =>{
+        if(error){
+          throw error
+        }else{
+          res.send({statu: true, ms: "Usuario encontrado", token: token})
+        }
+      })
+
     }else{
       res.send({statu: false, ms: "Contraseña incorrecta"})
     }
@@ -75,42 +84,32 @@ app.post("/Login/:email/:pass", async (req, res) =>{
   }else{
     res.send({statu: false, ms: "Usuario no encontrado"})
   }
-
-  // res.send({statu: true, ms: "Biennn"})
-
-  // JWT.sign(Ususario, "Login_User", {expiresIn: '30s'}, (error, token) => {
-  //   if (error) {
-  //     throw error;
-  //   } else {
-  //     res.json({ success: "Perfecto", token });
-  //   }
-  // });
- 
- 
-
 })
 
-//Authorization: Bearer <token>
-const VerificarAcceso = (req, res, next) =>{
-  const HeaderUser = req.headers.authorization;
 
-  if(typeof HeaderUser != "undefined"){
-    const token = HeaderUser
-    req.token = token;
-    next();
-  }
-} 
+app.post("/Messago", Verificar, (req, res) =>{
 
-app.post("/Messago", VerificarAcceso, async (req, res) =>{
-
-  JWT.verify(req.token, "Login_User", (error, authData) =>{
+  JWT.verify(req.token, SecreteKey, (error, AuthData)=>{
     if(error){
-      res.send("Error")
+      res.json("Token invalido")
     }else{
-      res.send(authData)
+      res.send(AuthData)
     }
   })
 })
+
+//Authorization: Bearer <token>
+function Verificar(req, res, next){
+  const HeaderAuthorization = req.headers.authorization;
+
+  if(typeof HeaderAuthorization != "undefined"){
+    const token = HeaderAuthorization.split(" ")[1];
+    req.token = token;
+    next();
+  }
+}
+
+
 
 
 
