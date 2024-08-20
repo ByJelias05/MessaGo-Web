@@ -99,7 +99,7 @@ const VerificarAcceso = (req, res, next) =>{
     req.token = token;
     next();
   }
-}
+} 
 
 app.post("/Messago", VerificarAcceso, async (req, res) =>{
 
