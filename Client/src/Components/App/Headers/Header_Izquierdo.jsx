@@ -3,11 +3,17 @@ import { FaUserPlus } from "react-icons/fa";
 import { HiUsers } from "react-icons/hi";
 import { SlOptionsVertical } from "react-icons/sl";
 
+import { useContext } from "react";
+import { MyPanelContext } from "../PanelIzquierdo";
+
 export function HeaderIzquierdo(){
+
+    const [PanelMyInformation, setPanelMyInformation] = useContext(MyPanelContext);
+
     return(
         <div className="Contenedor-Header-Izquierdo">
-             <div className="Img-User">
-                <img src="" alt="" />
+             <div className="Img-User" onClick={() => setPanelMyInformation(!PanelMyInformation)}>
+                <img src="" alt=""  />
             </div>
             <div className="Header-Izquierdo-Btns">
                 <button><FaUserPlus className="Icono-Header"/></button>

@@ -41,8 +41,6 @@ function App() {
           <a href="/Login">Inicar sesion</a>
         }
       </div>
-
-      <button onClick={() => console.log(user)}>verificar</button>
       
     </>
   )
