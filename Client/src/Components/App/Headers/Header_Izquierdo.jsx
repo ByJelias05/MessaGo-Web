@@ -12,13 +12,13 @@ export function HeaderIzquierdo(){
 
     return(
         <div className="Contenedor-Header-Izquierdo">
-             <div className="Img-User" onClick={() => setPanelMyInformation(!PanelMyInformation)}>
+             <div className="Img-User" style={{cursor: 'pointer'}} onClick={() => setPanelMyInformation(!PanelMyInformation)}>
                 <img src="" alt=""  />
             </div>
             <div className="Header-Izquierdo-Btns">
-                <button><FaUserPlus className="Icono-Header"/></button>
-                <button><HiUsers className="Icono-Header"/></button>
-                <button><SlOptionsVertical className="Icono-Header"/></button>
+                <button style={{cursor: 'pointer'}}><FaUserPlus className="Icono-Header"/></button>
+                <button style={{cursor: 'pointer'}}><HiUsers className="Icono-Header"/></button>
+                <button style={{cursor: 'pointer'}}><SlOptionsVertical className="Icono-Header"/></button>
             </div>
         </div>
     );

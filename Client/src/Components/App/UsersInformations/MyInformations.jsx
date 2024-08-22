@@ -15,7 +15,7 @@ export function MyInformations(){
     return(
         <div className="Contenedor-My-Information" ref={My_Information}>
             <div className="Header-My-Information">
-                <IoClose className="Icon-Close" onClick={() =>{setPanelMyInformation(!PanelMyInformation)}}/>
+                <IoClose className="Icon-Close" style={{cursor: 'pointer'}} onClick={() =>{setPanelMyInformation(!PanelMyInformation)}}/>
                 <h3 className="Title-Information">My Perfil</h3>
             </div>
 

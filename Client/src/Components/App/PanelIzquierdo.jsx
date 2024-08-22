@@ -29,7 +29,7 @@ export function PanelIzquierdo(){
                         <Friend/>
                         <Friend/>
                         <Friend/>
-                        <Friend/>
+                    
                     </div>
                 </div>
                 <MyInformations/>

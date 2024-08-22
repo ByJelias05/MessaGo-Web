@@ -77,6 +77,8 @@
 }
 .Contenedor-Filtro .Filtro-Input button{
     width: 30%;
+    background: transparent;
+    border: none;
 }
 
 
