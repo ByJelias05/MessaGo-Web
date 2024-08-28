@@ -10,7 +10,7 @@ export function MyMessages(){
                     <img src={foto} alt="" />
                 </div>
                 <div className="Text">
-                    <h3>ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</h3>
+                    <h3>Hola</h3>
                 </div>
                 <div className="Hora-Status">
                     <div className="Hora">

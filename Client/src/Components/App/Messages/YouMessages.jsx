@@ -13,7 +13,7 @@ export function YouMessages(){
                     <h3>Jelias Garcia</h3>
                 </div>
                 <div className="Text">
-                    <h3>ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</h3>
+                    <h3>Encantado de conocerte</h3>
                 </div>
                 <div className="Hora-Status">
                     <div className="Hora">
