@@ -1,0 +1,111 @@
+.Contenedor-My-Messages{
+    width: 100%;
+    height: auto;
+    -background: red;
+    display: flex;
+    justify-content: right;
+    margin-block: 25px;
+}
+
+.My-Message{
+    border: 2px solid rgb(171, 189, 228);
+    border-radius: 5px;
+    padding-inline: 10px;
+    float: left;
+    position: relative;
+    height: auto;
+}
+.My-Message .Foto{
+   display: flex;
+   justify-content: right;
+   transform: translateX(25px); 
+   position: relative;
+   bottom: 25px;
+
+
+}
+.My-Message .Foto img{
+ 
+    width: 50px;
+    border: 3px solid rgb(145, 206, 249);
+    border-radius: 100vmax;
+}
+.My-Message .Text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+  
+}
+.Hora-Status{
+    margin-top: 10px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 5px;
+}
+.Hora-Status .Hora{
+    color: rgb(145, 206, 249);
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+                        /* You Messages */
+
+
+
+.Contenedor-You-Messages{
+    width: 100%;
+    height: auto;
+    -background: red;
+    display: flex;
+    justify-content: left;
+    margin-block: 25px;
+}
+
+.You-Message{
+    border: 2px solid rgb(220, 157, 188);
+    border-radius: 5px;
+    padding-inline: 10px;
+    float: left;
+    position: relative;
+    height: auto;
+}
+.You-Message .Foto{
+   display: flex;
+   justify-content: right;
+   transform: translateX(25px); 
+   position: relative;
+   bottom: 25px;
+
+
+}
+.You-Message .Nombre{
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgb(145, 206, 249);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.You-Message .Foto img{
+ 
+    width: 50px;
+    border: 3px solid rgb(145, 206, 249);
+    border-radius: 100vmax;
+}
+.You-Message .Text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+  
+}
+.Hora-Status{
+    margin-block: 10px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.Hora-Status .Hora{
+    color: rgb(145, 206, 249);
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}

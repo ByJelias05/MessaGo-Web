@@ -9,6 +9,7 @@
 }
 .Contenedor-Box-Chat .Body-Chat{
     border-bottom: solid 1px rgba(0, 0, 0, 0.3);
+    padding: 50px;
 }
 .Contenedor-Box-Chat .Footer-Chat{
     -background: black;
